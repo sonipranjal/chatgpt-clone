@@ -14,14 +14,19 @@ export const openaiRouter = createTRPCRouter({
   chatCompletion: publicProcedure
     .input(
       z.object({
-        messageFromUser: z.string(),
+        messages: z.array(
+          z.object({
+            role: z.enum(["user", "assistant"]),
+            content: z.string(),
+          })
+        ),
       })
     )
-    .mutation(async ({ input: { messageFromUser } }) => {
+    .mutation(async ({ input: { messages } }) => {
       const response = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         temperature: 0.8,
-        messages: [{ role: "user", content: messageFromUser }],
+        messages,
       });
 
       console.log(response.data.choices);
