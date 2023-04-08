@@ -2,6 +2,10 @@
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
+If you're looking to dive deeper into NextJs and tRPC, check out my course on clubofcoders.com. You'll learn how to build an ultimate blog app using these powerful tools.
+
+https://clubofcoders.com/learn/Learn-tRPC-NextJs-and-Prisma-by-building-an-ultimate-blog-app
+
 ## What's next? How do I make an app with this?
 
 We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
